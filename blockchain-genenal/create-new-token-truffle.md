@@ -1,4 +1,4 @@
-## Steps to create a new token by Truffle
+## Steps to create a new token with Truffle
 [Reference: https://jamesbachini.com/new-token/]
 
 1. Prepare
@@ -77,6 +77,3 @@ While we are in the truffle console, we can interact with the deployed contract.
 - Also can transfer and check balances from within Truffle
 `instance.transfer('0x...','500000000000000000000');
 instance.balanceOf('0x...');`
-
-
-## Steps to create new token by Hardhat
