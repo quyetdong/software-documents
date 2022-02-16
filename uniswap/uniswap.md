@@ -12,6 +12,7 @@ The number after X indicates the number of fraction bits - 96
 
 Note: Since each token in solidity have different decimals parts, to calcluate the exact price, the formula should be
   price = JSBI.BigInt(sqrtPriceX96) * JSBI.BigInt(sqrtPriceX96) * (1e(decimals_token_0))/(1e(decimals_token_1) / (JSBI.BigInt(2) ** (JSBI.BigInt(192)));
+  
 ## Tick
 ### Calculate tick
 library: @uniswap/v3-sdk
