@@ -28,6 +28,7 @@
 - install a wallet management tool used in the Truffle config
 `$ npm install @truffle/hdwallet-provider`
 - Go into the myTokenProj/contracts directory, delete migrations.sol and create a new file called myToken.sol
+
 Copy below code used to create our new token
 
 `pragma solidity >=0.7.0 <0.9.0;
