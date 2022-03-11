@@ -48,3 +48,15 @@
   * New addition in React 16.8
   * Allow using state and other React features without writing a class
   * Hooks including list of built-in apis (functions) in React
+  * Example: useState
+
+
+## Two-way binding
+  * In React, data flows one way: from owner to child. This makes your app’s code easier to understand. It is considered as “one-way data binding.”
+
+  * However, there are lots of applications that require you to read some data and flow it back into your program like html forms when you receive user input...
+    This is considered as "two-way binding"
+
+## Conditional Rendering
+
+
