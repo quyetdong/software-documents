@@ -2,4 +2,4 @@
 
 ## Factory method pattern
 
-## Singleton class pattern
+## Singleton pattern
