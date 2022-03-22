@@ -1,2 +1,2 @@
-## Service discovery
+## Service discovery protocol
 
