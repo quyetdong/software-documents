@@ -60,3 +60,26 @@
 ## Conditional Rendering
 
 
+## Component Lifecycle
+  * Each React component has a lifecycle with three main phases: Mounting, Updating, Unmounting
+  * Mounting: putting the element into the DOM, below methods will be called in order
+      - constructor
+      - get derived state from props
+      - render
+      - component did mount
+
+  * Updating: when a component is updated
+      - getDerivedStateFromProps
+      - shouldComponentUpdate
+      - render
+      - getSnapshotBeforeUpdate
+      - componentDidUpdate
+
+  * Unmounting: when component is removed from the DOM or unmounting when React call it
+      - componentWillUnmount
+
+  * Error handling: when there is error in the component
+      - componentDidCatch
+
+  Only render method is required
+
