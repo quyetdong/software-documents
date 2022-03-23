@@ -1,5 +1,7 @@
-## Module pattern
+## 1. Module pattern
 
-## Factory method pattern
+## 2. Factory method pattern
 
-## Singleton pattern
+## 3. Dependency injection pattern
+
+## 4. Singleton class pattern
