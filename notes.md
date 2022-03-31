@@ -2,13 +2,13 @@ Blockchain:
 make request from javascript/nodejs to uniswap v3-sdk?
 deploy uniswap to public testnet
 
-
 - Polygon blockchain
 - Alchemy api
 
-
 1, How to avoid attacking by lots of requests to server (nodejs)
+
 2, Compare between two kinds of index in mysql: hash-index vs b-tree index
+
 3, Compare between SQL vs NoSQL:
   - SQL:
       * Advantage: select query fast (use index)
@@ -31,3 +31,4 @@ deploy uniswap to public testnet
 
 8, Map vs Set
 
+9, ERD Entity Relationship Diagram
