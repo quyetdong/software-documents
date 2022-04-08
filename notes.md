@@ -16,3 +16,11 @@ deploy uniswap to public testnet
 8, ERD Entity Relationship Diagram
 
 9, Docker environment variables
+
+- Compare: Cookie, SessionStorage, LocalStorage
+- GRPC vs REST vs Websocket
+- Use closuse in Nodejs application
+- Github action
+- Mern stack
+- Reddit MQ/ Rabbit MQ
+- Oauth
