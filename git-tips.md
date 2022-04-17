@@ -9,3 +9,7 @@
 - fast-forward merge
 - merge commit
 - Rebase
+
+
+## 3. New commands
+- git branch -M [old-branch-name] <new-branch-name>: rename branch name from old name (optional) to new name
