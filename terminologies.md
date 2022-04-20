@@ -28,8 +28,9 @@ vs AJAX
 - DDP in Meteor (Distributed Data Protocol)
 
 
-## REST
-- REST is an acronym for REpresentational State Transfer and an architectural style for distributed hypermedia systems.
+## REST (REpresentational State Transfer)
+- REST is an architectural style for distributed hypermedia systems
+
 
 ## URI vs URL
 - All URLs are URIs, as every URL can only contain the location.
