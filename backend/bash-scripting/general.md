@@ -70,7 +70,7 @@ bash --version
 - A token is a sequence of characters that is considered as a single unit by the shell
 - Bash uses meta characters (unquoted) to break up a command line into tokens -> tokenization
 - 10 meta characters
-  * The pipe `|`
+  * The pipe `|` 
   * The ampersand `&`
   * The semicolon `;`
   * The left and right parentheses `()`
@@ -90,6 +90,8 @@ bash --version
 - Compound commands: bash's programming constructs
   * Starts with a reserved word, and terminated by a corresponding reserved word
   
+>> sub command (sub shell)
+
 ### 3.Shell's Expansions
 - 4 stages follow the order (priority) below
   * Stage 1: Brace expansion
@@ -115,10 +117,19 @@ bash --version
 
 ### 4.Quote Removal
 - During quote removal, the shell removes all unquoted backslashes, single quote characters,
- and double quote characters that did not result from a shell expansion
+ and double quote characters that did not result from a shell expansion 
+
 
 ### 5.Redirection
-- Operators: `<` `>` `2>`
+- Operators:
+  `<` stdin
+  `>` stdout, truncate previous data from the destination file
+  `2>` stderr, truncate previous data from the destination file
+  `&>` both stout & stderr, truncate previous data from the destination file
+  `>>` stdout, append new data to previous data
+  `2>>`
+  `&>>`
+
 - Linux and Unix derived systems allow commands to take advantage of three standard data streams, each of which is given a stream No.
   * stream 0: Standard Input stream (stdin)
     + an alternative way of provding input to a command, aside from using command line arguments
@@ -131,6 +142,3 @@ bash --version
     + contains all error mesages and status messages that a command produces
     + not considered as the main output of a command
     + Ex: ls non-exist-file 2> error.txt
-
-
-
