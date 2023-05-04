@@ -34,3 +34,14 @@ else
   echo test failed
 fi
 ```
+
+## Case statement
+- a type of compound command: starts with the reserved word `case` and ends with `esac`
+```
+read -p "Please enter a number" nubmer
+case "$number" in
+  [0-9]) echo "you have entered a single digit number";;
+  [0-9][0-9]) echo "you have entered a double digits number";;
+  *) echo "you have entered a number more than two digits";;
+esac
+```

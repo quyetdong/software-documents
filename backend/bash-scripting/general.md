@@ -109,8 +109,8 @@ bash --version
   * echo ${IFS@Q} ... zsh  printf "[%s]\n" $IFS
 
 - Globbing
-  * Only perform on words
   * Globbing patterns: words that contain unquoted Special Pattern Characters `*, ?, [`
+  * Only perform on words
   * `*` match any character regardless of its length
   * `?` match any single character (exactly one character)
   * `[]` match any single character that placed inside the square brackets
