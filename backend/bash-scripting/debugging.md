@@ -33,3 +33,4 @@
   * tend to be more detailed on average than man pages
   * use in case you are not clear about the command after using the `man` command, or you want to have more official information
   * `info` >> show infor about core commands of the system that are categorized for you
+  * 
