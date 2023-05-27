@@ -177,4 +177,45 @@
 -
 ## vimrc
 - rc = run commands
+- each time vim starts, it runs the commands in the .vimrc file
+- :set 'history'?
+- color color_scheme_name
+- map
+- modeline
+- mkvimrc
 - 
+## Vim buffers and windows
+- Buffers
+  - Buffer is a temporary memory area in which data is stored while it is being transferred or processed
+  - ":ls" = ":buffers" = ":files": show list of files are openning with vim
+  - ":b{number}": show a specific file associated with the `number`
+  - ":b {file_name}" 
+  - "Ctrl + ^": switch back to the previous opened buffer
+  - ":set hidden"
+  - ":qall!"
+  - ":wall"
+  - ":bn"
+  - ":badd + {file_name}"
+  - ":bd + {indicator}"
+  - ":bufdo + {command}" 
+  - ":e"
+  - ":Ex"
+- Windows
+  - ":sp" = ":split" = "Ctrl-w + s": horizontal split
+  - ":sp + [file_path]"
+  - ":vs" = ":vsplit" = "Ctrl-w + v": vertical split
+  - "Ctrl-w + q": quit the window
+  -  "|" = "shift + \": open file path in directory tree
+  - ":on" = ":only" = "Ctrl-w + o": make the current window being the only window on the screen (close others except the current one)
+  - "Ctrl-w + w"; "Ctrl-w + {h/j/k/l}"
+  - "Ctr-w + ="; "Ctr-w + _ "
+
+  - ":ba" = ":ball": opens all buffers in their own windows
+  - ":windo + {command}" 
+  - 
+- Plugins
+  * ":pa + {plugin_name}" = ":packadd + {plugin_name}"
+  * ":CtrlP": work with other files in the folder
+
+
+
