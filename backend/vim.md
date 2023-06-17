@@ -3,13 +3,13 @@
 - Vim = Vi + Improved
 (Vi - visual: a text editor)
 - Ubiquitous and Powerful
-
+- 
 # Vim modes
 - Three main modes
   * Normal mode (Command mode - press ESC): anything you type is considered as a command
   * Insert mode (type "i"): what you type is going to the document/file
   * Line mode (type colon ":"): to give commands to work with documents, to go to a specific line of the documents
--
+- 
 # Commands
 ## Navigation commands
 - Move by single character or line: "h, j, k, l"
@@ -217,5 +217,7 @@
   * ":pa + {plugin_name}" = ":packadd + {plugin_name}"
   * ":CtrlP": work with other files in the folder
 
-
+## Vim Graphical User Interfaces
+- Gvim, Macvim 
+- 
 
