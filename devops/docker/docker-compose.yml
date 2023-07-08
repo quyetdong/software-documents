@@ -1,0 +1,6 @@
+services:
+  server:
+    build: ./
+    image_name: node-server
+    ports: 80:80
+

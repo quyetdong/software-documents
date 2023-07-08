@@ -1,0 +1,27 @@
+{
+  "name": "docker-complete",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js",
+    "start-mongor": "docker run --rm --name mgdb -d --network favorite-net mongo:6",
+    "start-mongo": "docker run --name mgdb -d --network favorite-net mongo:6",
+    "do-build": "docker build -t network .",
+    "do-run": "docker run --rm --name network-app -v \"$(pwd):/app\" -v /app/node_modules -p 3000:9000 --env-file ./.env --network favorite-net network",
+    "do-rund": "docker run -d --rm --name network-app -v \"$(pwd):/app\" -v /app/node_modules -p 3000:9000 --env-file ./.env --network favorite-net network",
+    "do-runit": "docker run -it --rm --name network-app -v \"$(pwd):/app\" -v /app/node_modules -p 3000:9000 --env-file ./.env --network favorite-net network bash"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.20.0",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.10.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}

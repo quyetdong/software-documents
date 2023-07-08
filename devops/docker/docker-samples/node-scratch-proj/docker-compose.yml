@@ -1,0 +1,13 @@
+services:
+  util-container:
+    build: ./
+    image: kentdong/uti-container
+    container_name: uti-contianer-app
+    volumes:
+      - /app/node_modules
+      - ./:/app
+    ports:
+      - 3000:3000
+    # entrypoint: ["/bin/bash"]
+    # command: ["/bin/bash"]
+    # command: ["param"]

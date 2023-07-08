@@ -69,3 +69,8 @@ cmd is ignored if passing any arguments when starting the container
 - we will log into the bash window inside the container
 - “-d”: detach
 - 
+2. docker history ${img_name}
+- get build instructions history
+-
+3. docker compose up -d --build [service_name]
+

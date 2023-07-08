@@ -1,0 +1,10 @@
+services:
+  server:
+    build: ./
+    image: kentdong/node-img
+    container_name: node-app
+    ports:
+      - 80:80
+    env_file:
+      - .env
+    

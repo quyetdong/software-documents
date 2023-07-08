@@ -1,0 +1,23 @@
+{
+  "name": "data-volume-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "author": "Maximilian Schwarzmüller / Academind GmbH",
+  "license": "ISC",
+  "scripts": {
+    "start": "nodemon server.js",
+    "dobuild-dev": "docker build -t feedback:dev --build-arg DE_PORT=3000 .",
+    "docker-run": "docker run --name feedback-app --rm -v \"$(pwd):/app:ro\" -v /app/node_modules -v feedbackvol:/app/feedback -v /app/temp --env-file ./.env -p 3000:9000",
+    "docker-rund": "docker run -d --name feedback-app --rm -v \"$(pwd):/app:ro\" -v /app/node_modules -v feedbackvol:/app/feedback -v /app/temp --env-file ./.env -p 3000:9000",
+    "docker-run-withimg": "docker run --name feedback-app --rm -v \"$(pwd):/app:ro\" -v /app/node_modules -v feedbackvol:/app/feedback -v /app/temp --env-file ./.env -p 3000:9000 feedback",
+    "docker-rund-noenv": "docker run -d --name feedback-app --rm -v \"$(pwd):/app:ro\" -v /app/node_modules -v feedbackvol:/app/feedback -v /app/temp -p 3000:9000"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}

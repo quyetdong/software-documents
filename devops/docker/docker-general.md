@@ -56,6 +56,49 @@
 -
 ## Docker Arguments and Environment variables
 - Arguments: build-time arguments, set on image build via `--build-arg`
-  availabe inside of Dockerfile, not accessible in CMD or any application code
+ * availabe inside of Dockerfile, not accessible in CMD or any application code
+ * allow us to plug in different values into our Dockerfile/ or into our image when we build that image
+ without having to hardcode these values into the Dockerfile
 - Environment variables: run-time variables, set via `ENV` in Dockerfile or via `--env` on docker run
-  available inside of Dockerfile & in application code
+ * available inside of Dockerfile & in application code
+ * environment variables help to increase security for the project 
+
+## Networking
+- which kinds of network we have, where you can send requests to from inside your containers (send http requests to some other service running on your machine, how you can reach out to the world wide web from inside your container...)
+- how we can connect multiple containers so that they can interact with each other
+- 
+- Requests from inside container to WWW (world wide web): always work
+- Requests from container to host machine (localhost): use `host.docker.internal` as address instead of `localhost`
+- 
+- Communicate btw containers by manually get the IP address of the other container after run `docker container inspect container_name`
+- Communicate between containers through container network:
+  * the communication is internal inside the network, so if you don't want a container be accessed from outside, you don't need to publish the port of that container
+  * Create a container network by `docker network create network_name` 
+  * run each container in the same network created in the previous step by the flag `--network`
+  * communicate between containers in the same network by container_name
+- Docker Networks actually support different kinds of "Drivers" which influence the behavior of the Network.
+The default driver is the "bridge" driver - it provides the behavior shown in this module (i.e. Containers can find each other by name if they are in the same Network).
+The driver can be set when a Network is created, simply by adding the --driver option. 
+- 
+## Building Multi-container applications
+## Docker-compose
+- A tool that allows you to replace Docker build and Docker run commands 
+- Can replace multiple Docker build and Docker run commands with one configuration file
+- Support a set of orchestration commands to start all expected services (containers) at once, and build all necessary images (if requried)
+- Can use one command to stop everything and bring everything down
+- `docker compose --help`
+- `docker compose build`
+- `docker compose up -d --build [service_name...]`
+- `docker compose down -v`
+-  
+## Utility Containers
+- Only contain the application environment
+- To initialize an application project, where you can start writing your first lines of code
+- `docker compose run --rm util-container-service bash`: run bash command in util-container-service
+- `docker compose run --rm util-container-service npm init`: init a nodejs project
+- `docker compose up`: meant to bring up services defined in a docker compose yml file (application containers)
+- `docker compose run`: allow us to run a single service from docker-compose.yml 
+-
+## Complex Setup
+- 
+
