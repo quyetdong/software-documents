@@ -100,5 +100,14 @@ The driver can be set when a Network is created, simply by adding the --driver o
 - `docker compose run`: allow us to run a single service from docker-compose.yml 
 -
 ## Complex Setup
+- Use utility container like a tool to setup projects
+-
+## Multi-stage builds
+- Each `FROM` instruction define a stage in Dockerfile
+- The image is the result of the final stage by default
+- We can copy files/data from other stages by stage name
+- Think of a stage like an image with it's own file system
+- `docker build --target {stage_name} -t {image_name} .`: choose the build stage you want to build the image
 - 
+
 

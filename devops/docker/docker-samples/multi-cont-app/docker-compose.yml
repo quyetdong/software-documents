@@ -1,0 +1,53 @@
+services:
+  # dbserver:
+  #   image: mongo:6
+    # networks:
+    #   - goal-net
+    # volumes:
+    #   - goalsdb:/data/db
+    # env_file:
+    #   - ./env/mongo.env
+    # environment:
+    #   MONGO_INITDB_ROOT_USERNAME: kentdong
+    #   MONGO_INITDB_ROOT_PASSWORD: letgo@2024
+  begoals:
+    build: ./backend
+    # build:
+    #   context: ./backend
+    #   dockerfile: Dockerfile
+    #   args:
+    #     some-arg: 1
+    image: kentdong/begoals:dev
+    container_name: begoals-app
+    # networks:
+    #   - goal-net
+    ports:
+      - 3000:3000
+    volumes:
+      - ./backend:/app
+      - be_nodemod:/app/node_modules
+    env_file:
+      - ./env/dev.backend.env
+    command: ["npm", "run", "start-dev"]
+    # depends_on:
+    #   - dbserver
+  frongoals:
+    build: ./frontend
+    image: kentdong/frontgoals:dev
+    ports:
+      - 3002:3002
+    volumes:
+      - ./frontend:/app
+      - fron_nodemod:/app/node_modules
+    env_file:
+      - ./env/frontend.env
+    depends_on:
+      - begoals
+
+# networks:
+#   goal-net:
+
+volumes:
+  # goalsdb:
+  be_nodemod:
+  fron_nodemod:
